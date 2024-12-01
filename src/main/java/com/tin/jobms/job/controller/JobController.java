@@ -16,6 +16,7 @@ public class JobController {
     @Autowired
     JobService jobService;
 
+
     @GetMapping
     public ResponseEntity<List<JobWithCompanyDTO>> findAll() {
         return new ResponseEntity<>(jobService.findAll(), HttpStatus.OK);
